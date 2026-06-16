@@ -14,6 +14,16 @@
     font-family:Arial,Tahoma,sans-serif;
 }
 
+:root{
+    --main-red:#ff4d6d;
+    --soft-red:#ff8fa3;
+    --light-red:#ffd6dc;
+    --pale-red:#fff1f3;
+    --card-bg:#fffafa;
+    --text-red:#7a1f2b;
+    --muted-red:#9f5a66;
+}
+
 body{
     height:100vh;
     display:flex;
@@ -22,26 +32,32 @@ body{
     background:
     radial-gradient(circle at 8% 12%, rgba(255,255,255,.85) 0 .7rem, transparent .75rem),
     radial-gradient(circle at 82% 10%, rgba(255,255,255,.65) 0 1rem, transparent 1.08rem),
-    linear-gradient(135deg,#fff8c2 0%,#ffe884 30%,#ffd84d 62%,#ffc928 100%);
+    linear-gradient(135deg,
+        #fff7f8 0%,
+        var(--pale-red) 30%,
+        var(--light-red) 62%,
+        var(--soft-red) 100%
+    );
 }
 
 .card{
     width:90%;
     max-width:450px;
-    background:#fffef8;
+    background:var(--card-bg);
     border-radius:28px;
     padding:30px;
     text-align:center;
-    box-shadow:0 20px 50px rgba(0,0,0,.15);
+    box-shadow:0 20px 50px rgba(122,31,43,.18);
+    border:1px solid rgba(255,77,109,.18);
 }
 
 h1{
-    color:#7a4f00;
+    color:var(--text-red);
     margin-bottom:10px;
 }
 
 p{
-    color:#8a6a18;
+    color:var(--muted-red);
     margin-bottom:20px;
 }
 
@@ -49,8 +65,8 @@ p{
     width:50px;
     height:50px;
     margin:20px auto;
-    border:5px solid #ffe58a;
-    border-top:5px solid #facc15;
+    border:5px solid var(--light-red);
+    border-top:5px solid var(--main-red);
     border-radius:50%;
     animation:spin 1s linear infinite;
 }
@@ -63,12 +79,17 @@ p{
 
 button{
     border:none;
-    background:#facc15;
-    color:#6b4f00;
+    background:var(--pale-red);
+    color:var(--text-red);
     padding:12px 20px;
     border-radius:12px;
     font-weight:bold;
     cursor:pointer;
+    box-shadow:0 8px 18px rgba(255,77,109,.18);
+}
+
+button:hover{
+    background:var(--light-red);
 }
 </style>
 </head>
